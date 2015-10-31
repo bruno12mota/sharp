@@ -187,7 +187,6 @@ namespace sharp {
    * Stretch luminance to cover full dynamic range.
    */
   int Normalize(VipsObject *context, VipsImage *image, VipsImage **out) {
-#ifndef _WIN32
     // Get original colourspace
     VipsInterpretation typeBeforeNormalize = image->Type;
     if (typeBeforeNormalize == VIPS_INTERPRETATION_RGB) {
@@ -262,11 +261,6 @@ namespace sharp {
       // Cannot normalise zero-range image
       *out = image;
     }
-#else
-    // The normalize operation is currently unsupported on Windows
-    // See https://github.com/lovell/sharp/issues/152
-    *out = image;
-#endif
     return 0;
   }
 
