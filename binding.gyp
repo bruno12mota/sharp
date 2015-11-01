@@ -20,23 +20,7 @@
             'libraries': [
                 'libvips.dll.a',
                 'glib-2.0.lib',
-                'gobject-2.0.lib',
-                'gthread-2.0.lib',
-                'gmodule-2.0.lib',
-                'liblcms2.dll.a',
-                'libxml2.lib',
-                'intl.lib',
-                'libjpeg.dll.a',
-                'libexif.dll.a',
-                'libpng.lib',
-                'libtiff.dll.a',
-                'libMagickWand-6.Q16.dll.a',
-                'libMagickCore-6.Q16.dll.a',
-                'pango-1.0.lib',
-                'pangoft2-1.0.lib',
-                'libgsf-1.dll.a',
-                'libopenslide.dll.a',
-                'libfftw3.dll.a'
+                'gobject-2.0.lib'
             ],
             'include_dirs': [
                 '$(VIPS_HOME)/include',
@@ -78,16 +62,11 @@
       ],
       'MACOSX_DEPLOYMENT_TARGET': '10.7'
     },
-    'msvs_settings': {
-      'VCCLCompilerTool': {
-        'ExceptionHandling': 1 # /EHsc
-      }
-    },
     'configurations': {
       'Release': {
         'msvs_settings': {
           'VCCLCompilerTool': {
-            'ExceptionHandling': 1,
+            'ExceptionHandling': 1
           }
         }
       }
