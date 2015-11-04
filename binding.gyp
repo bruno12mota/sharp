@@ -18,24 +18,9 @@
                 '$(VIPS_HOME)/lib'
             ],
             'libraries': [
-                'libvips.dll.a',
-                'libglib-2.0.dll.a',
-                'libgobject-2.0.dll.a',
-                'libgthread-2.0.dll.a',
-                'libgmodule-2.0.dll.a',
-                'liblcms2.dll.a',
-                'libxml2.dll.a',
-                'intl.lib',
-                'libjpeg.dll.a',
-                'libexif.dll.a',
-                'libpng14.dll.a',
-                'libtiff.dll.a',
-                'libMagickWand-6.Q16.dll.a',
-                'libMagickCore-6.Q16.dll.a',
-                'libpango-1.0.dll.a',
-                'libgsf-1.dll.a',
-                'libopenslide.dll.a',
-                'libfftw3.dll.a'
+                'libvips.lib',
+                'libglib-2.0.lib',
+                'libgobject-2.0.lib'
             ],
             'include_dirs': [
                 '$(VIPS_HOME)/include',

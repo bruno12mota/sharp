@@ -11,8 +11,8 @@ environment:
   - nodejs_version: "4"
 install:
   - ps: $env:VIPS_VERSION = "$env:VIPS_VERSION_MAJOR_MINOR.$env:VIPS_VERSION_PATCH"
-  - ps: Write-Output "Fetching http://www.vips.ecs.soton.ac.uk/development/vips-dev-w64-$env:VIPS_VERSION.zip"
-  - ps: Start-FileDownload http://www.vips.ecs.soton.ac.uk/development/vips-dev-w64-$env:VIPS_VERSION.zip -FileName c:\vips-dev-$env:VIPS_VERSION.zip
+  - ps: Write-Output "Fetching http://www.vips.ecs.soton.ac.uk/development/vips-dev-w64-$env:VIPS_VERSION-1.zip"
+  - ps: Start-FileDownload http://www.vips.ecs.soton.ac.uk/development/vips-dev-w64-$env:VIPS_VERSION-1.zip -FileName c:\vips-dev-$env:VIPS_VERSION.zip
   - ps: Invoke-Expression "& 7z -y x c:\vips-dev-$env:VIPS_VERSION.zip -oc:\ | FIND /V `"ing  `""
   - ps: $env:VIPS_HOME = "c:\vips-dev-$env:VIPS_VERSION"
   - ps: $env:PATH = "$env:VIPS_HOME\bin;$env:PATH"
