@@ -2,7 +2,7 @@
   'targets': [{
     'target_name': 'sharp',
     'variables': {
-      'runtime_link%':'shared', 
+      'runtime_link%':'shared',
     },
     'sources': [
       'src/common.cc',
@@ -70,12 +70,12 @@
     ],
     'xcode_settings': {
       'OTHER_CPLUSPLUSFLAGS': [
-        '-std=c++11',
-        '-stdlib=libc++',
         '-fexceptions',
         '-Wall',
         '-O3'
       ],
+      'CLANG_CXX_LIBRARY': 'libc++',
+      'CLANG_CXX_LANGUAGE_STANDARD':'c++11',
       'MACOSX_DEPLOYMENT_TARGET': '10.7'
     },
     'msvs_settings': {
